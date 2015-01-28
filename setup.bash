@@ -10,4 +10,5 @@ if [ ! -d ~/.vim ]; then
   ln -s $PWD/vim ~/.vim
 fi
 
+git submodule update --init --recursive
 git submodule foreach git pull origin master
