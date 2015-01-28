@@ -19,6 +19,8 @@ cmap Q q
 cmap W w
 imap jk <Esc>
 imap kj <Esc>
+" idk if this works
+set nocp
 execute pathogen#infect()
 
 " nerdtree stuff
