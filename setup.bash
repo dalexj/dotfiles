@@ -9,3 +9,5 @@ fi
 if [ ! -d ~/.vim ]; then
   ln -s $PWD/vim ~/.vim
 fi
+
+git submodule foreach git pull origin master
