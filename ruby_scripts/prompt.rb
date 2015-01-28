@@ -3,6 +3,18 @@ def parse_git_branch
   branch.strip == "HEAD" ? "(no branch)" : branch
 end
 
+def git_status_message
+  git_status = %x{git status 2> /dev/null}
+
+  if git_status =~ /nothing to commit/
+    "Clean"
+  elsif !git_status
+    "Not on repo"
+  else
+    "Unclean"
+  end
+end
+
 def prompt_segment(text, text_color = 7)
   "\e[45m\e[3#{text_color}m #{text.strip} \e[00m "
 end
@@ -15,7 +27,7 @@ def build_mah_prompt
   branch = parse_git_branch
   unless branch == ""
     prompt += prompt_segment " #{branch} ", 2
-    prompt += prompt_segment " #{%x(ruby ~/.ruby_scripts/git_status_message.rb)} ", 2
+    prompt += prompt_segment " #{git_status_message} ", 2
   end
 
   prompt += "\n$ "

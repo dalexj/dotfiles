@@ -52,6 +52,9 @@ function ghub {
 function gp {
   git push -u origin $(parse_git_branch)
 }
+function parse_git_branch {
+  ruby ~/.ruby_scripts/parse_git_branch.rb
+}
 
 # Rails/Ruby aliases
 alias cov="open coverage/index.html"
