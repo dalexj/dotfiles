@@ -35,5 +35,14 @@ source ~/.aliases.bash
 function ruby_prompt {
   PS1=$(ruby ~/.ruby_scripts/prompt.rb)
 }
+function setbg {
+  export PROMPT_BG_COLOR=$1
+}
+function settext {
+  export PROMPT_TEXT_COLOR=$1
+}
 
+setbg 5
+settext 2
 PROMPT_COMMAND='ruby_prompt'
+

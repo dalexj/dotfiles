@@ -1,3 +1,5 @@
+
+
 def parse_git_branch
   branch = %x{git rev-parse --abbrev-ref HEAD 2>/dev/null}
   branch.strip == "HEAD" ? "(no branch)" : branch
@@ -16,7 +18,8 @@ def git_status_message
 end
 
 def prompt_segment(text, text_color = 7)
-  "\e[45m\e[3#{text_color}m #{text.strip} \e[00m "
+  bg_color = ENV["PROMPT_BG_COLOR"]
+  "\e[4#{bg_color.strip}m\e[3#{text_color}m #{text.strip} \e[00m "
 end
 
 
@@ -26,8 +29,8 @@ def build_mah_prompt
 
   branch = parse_git_branch
   unless branch == ""
-    prompt += prompt_segment " #{branch} ", 2
-    prompt += prompt_segment " #{git_status_message} ", 2
+    prompt += prompt_segment " #{branch} ", ENV["PROMPT_TEXT_COLOR"]
+    prompt += prompt_segment " #{git_status_message} ", ENV["PROMPT_TEXT_COLOR"]
   end
 
   prompt += "\n$ "
