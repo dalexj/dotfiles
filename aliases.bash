@@ -6,7 +6,9 @@ alias abp="atom ~/.bash_profile"
 alias notes="vim ~/.notes"
 alias ..="cd .. ; echo I added it for you Josh"
 alias proj="cd ~/turing/projects"
+alias week="cd ~/turing/week19"
 alias la="l -a"
+alias :q="exit"
 function mkcd {
   mkdir $1
   cd $1
@@ -87,3 +89,6 @@ alias again="git clone https://github.com/JumpstartLab/blogger_advanced.git"
 alias fmtall="gofmt -w *"
 alias fmtal="gofmt -w *"
 alias grun="go run *"
+alias cdgo="cd ~/go/src/github.com/dalexj"
+alias doc="godoc -http=:6060"
+
