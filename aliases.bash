@@ -6,9 +6,10 @@ alias abp="atom ~/.bash_profile"
 alias notes="vim ~/.notes"
 alias ..="cd .. ; echo I added it for you Josh"
 alias proj="cd ~/turing/projects"
-alias week="cd ~/turing/week19"
+alias week="cd ~/turing/week22"
 alias la="l -a"
 alias :q="exit"
+alias path="echo $PATH | tr : '\n'"
 function mkcd {
   mkdir $1
   cd $1
@@ -36,12 +37,13 @@ alias cd..="cd .."
 alias aotm="atom"
 
 # Git aliases
-alias gs="git status && echo 'Have you ran your tests?'"
+alias gs="git status && echo 'Have you run your tests?'"
 alias gd="git diff --patience"
 alias gc="git checkout"
 alias gb="git branch"
 alias ga="git add"
 alias gh="git hist -5"
+alias gpu="git pull"
 alias gds="git diff --patience --staged"
 alias gcmn="git commit -m" # git commit no twitter
 function gcm {             # git commit with twitter
@@ -91,4 +93,7 @@ alias fmtal="gofmt -w *"
 alias grun="go run *"
 alias cdgo="cd ~/go/src/github.com/dalexj"
 alias doc="godoc -http=:6060"
+
+# ember aliases
+alias emb="open -a Google\ Chrome\ Canary http://localhost:4200; ember server"
 

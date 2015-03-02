@@ -5,6 +5,8 @@ export PATH
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 export GOPATH="/Users/alex/go"
 export PATH="$PATH:$GOPATH/bin"
+export PATH="/Applications/Sublime Text 2.app/Contents/SharedSupport/bin:$PATH"
+export PATH="$HOME/.npm-global/stay_here/bin:$PATH"
 
 # iTerm profile changer
 function color {
@@ -42,7 +44,12 @@ function settext {
   export PROMPT_TEXT_COLOR=$1
 }
 
-setbg 5
-settext 2
+setbg 6
+settext 3
 PROMPT_COMMAND='ruby_prompt'
 
+# git autocompletion for branch names
+if [ -f ~/.git-completion.bash ]; then
+  source ~/.git-completion.bash
+  __git_complete gc _git_checkout
+fi

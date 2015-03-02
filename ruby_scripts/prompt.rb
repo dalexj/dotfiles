@@ -1,5 +1,3 @@
-
-
 def parse_git_branch
   branch = %x{git rev-parse --abbrev-ref HEAD 2>/dev/null}
   branch.strip == "HEAD" ? "(no branch)" : branch
