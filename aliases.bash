@@ -7,6 +7,7 @@ alias notes="vim ~/.notes"
 alias ..="cd .. ; echo I added it for you Josh"
 alias proj="cd ~/turing/projects"
 alias week="cd ~/turing/week22"
+alias blog="cd ~/turing/jekyll_blog"
 alias la="l -a"
 alias :q="exit"
 alias path="echo $PATH | tr : '\n'"
@@ -14,6 +15,8 @@ function mkcd {
   mkdir $1
   cd $1
 }
+
+alias newpost="ruby ~/.ruby_scripts/new_post.rb"
 
 function op {
   open http://$1
