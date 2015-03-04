@@ -13,8 +13,5 @@ layout: post
 ---
 MARKDOWN
 
-# puts full_path
-# puts
-# puts md
 File.write(full_path, md)
 %x{atom #{full_path}}
