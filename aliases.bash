@@ -9,6 +9,7 @@ alias proj="cd ~/turing/projects"
 alias week="cd ~/turing/week22"
 alias blog="cd ~/turing/jekyll_blog"
 alias la="l -a"
+alias ll="l"
 alias :q="exit"
 alias path="echo $PATH | tr : '\n'"
 function mkcd {
