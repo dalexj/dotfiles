@@ -3,6 +3,9 @@ export PATH
 export PATH="$HOME/.bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
+
 # rbenv
 eval "$(rbenv init -)"
 
