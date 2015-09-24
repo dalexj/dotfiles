@@ -3,7 +3,7 @@ export PATH
 export PATH="$HOME/.bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 
-export GOPATH="$HOME/go"
+export GOPATH="$HOME/code/go"
 export PATH="$GOPATH/bin:$PATH"
 
 # rbenv
