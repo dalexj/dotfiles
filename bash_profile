@@ -20,6 +20,10 @@ source ~/.aliases.bash
 function ruby_prompt {
   PS1=$(ruby ~/.ruby_scripts/prompt.rb)
 }
+
+function go_prompt {
+  PS1=$(~/dotfiles/go_scripts/prompt)
+}
 function setbg {
   export PROMPT_BG_COLOR=$1
 }
@@ -29,7 +33,8 @@ function settext {
 
 setbg 6
 settext 3
-PROMPT_COMMAND='ruby_prompt'
+# PROMPT_COMMAND='ruby_prompt'
+PROMPT_COMMAND='go_prompt'
 
 # git autocompletion for branch names
 if [ -f ~/.git-completion.bash ]; then
