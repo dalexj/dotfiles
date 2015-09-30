@@ -10,3 +10,4 @@
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/.git-completion.bash
 ```
 and this bash_profile will pick it up
+5. If you want my atom setup, run `source atom_setup.bash`
