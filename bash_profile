@@ -7,7 +7,7 @@ export GOPATH="$HOME/code/go"
 export PATH="$GOPATH/bin:$PATH"
 
 # rbenv
-eval "$(rbenv init -)"
+which rbenv >/dev/null && eval "$(rbenv init -)"
 
 2gem () {
   cd "$(dirname $(gem which $1))"
