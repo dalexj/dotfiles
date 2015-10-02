@@ -7,6 +7,7 @@ alias abp="atom ~/.bash_profile"
 alias ..="cd .."
 alias la="l -a"
 alias ll="l"
+alias aa="atom ."
 alias :q="exit"
 alias path="echo $PATH | tr : '\n'"
 function mkcd {
@@ -64,6 +65,9 @@ function gbl {
 }
 function gdd {
   gd $(gbl)
+}
+function gaa {
+  ga $(gbl)
 }
 
 # Rails/Ruby aliases
