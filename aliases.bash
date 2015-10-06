@@ -8,6 +8,7 @@ alias ..="cd .."
 alias la="l -a"
 alias ll="l"
 alias aa="atom ."
+alias aad="atom --dev ."
 alias :q="exit"
 alias path="echo $PATH | tr : '\n'"
 function mkcd {
