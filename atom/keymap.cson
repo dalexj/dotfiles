@@ -36,3 +36,5 @@
   'alt-shift-K':'change-case:constant'
   'alt-shift-H':'change-case:pascal'
   'alt-shift-L':'change-case:snake'
+  'ctrl-h': 'tree-view:toggle-focus'
+  'ctrl-l': 'tree-view:toggle-focus'

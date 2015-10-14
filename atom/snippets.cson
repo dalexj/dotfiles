@@ -46,3 +46,8 @@
   'anonymous function2':
     'prefix': 'khg'
     'body': 'function($1) {\n  $2\n}'
+
+'.text.html.erb':
+  'end for ruby block':
+    'prefix': 'end'
+    'body': '<% end %>'
