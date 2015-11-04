@@ -39,6 +39,13 @@
   'pry':
     'prefix': 'pry'
     'body': 'require "pry"; binding.pry;'
+  'end is hard':
+    'prefix': '  ebd'
+    'body': 'end'
+  'active record test logger':
+    'prefix': 'ar_logger'
+    'body': 'ActiveRecord::Base.logger = Logger.new(STDOUT)'
+
 '.source.js':
   'anonymous function':
     'prefix': 'f'

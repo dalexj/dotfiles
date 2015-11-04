@@ -11,6 +11,7 @@ alias aa="atom ."
 alias aad="atom --dev ."
 alias :q="exit"
 alias path="echo $PATH | tr : '\n'"
+alias h="heroku"
 function mkcd {
   mkdir $1
   cd $1
@@ -51,6 +52,7 @@ alias gh="git log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yello
 alias gpu="git pull"
 alias gds="git diff --patience --staged"
 alias gcm="git commit -m"
+alias ghpages="git push origin master:gh-pages"
 
 function ghub {
   ruby ~/.ruby_scripts/ghub.rb
