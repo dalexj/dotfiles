@@ -53,6 +53,7 @@ alias gpu="git pull"
 alias gds="git diff --patience --staged"
 alias gcm="git commit -m"
 alias ghpages="git push origin master:gh-pages"
+alias 2ghpages="open http://dalexj.github.io/$(basename $(pwd))"
 
 function ghub {
   ruby ~/.ruby_scripts/ghub.rb
@@ -88,3 +89,4 @@ alias rs="(sleep 4 && open http://localhost:3000/ &); rails s"
 alias dbmig="bundle exec rake db:migrate"
 alias dbset="bundle exec rake db:setup"
 alias be="bundle exec"
+alias server="ruby -e 'require %q(sinatra); set :public_folder, %q(.)'"

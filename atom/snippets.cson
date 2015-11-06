@@ -50,9 +50,9 @@
   'anonymous function':
     'prefix': 'f'
     'body': 'function($1) {\n  $2\n}'
-  'anonymous function2':
-    'prefix': 'khg'
-    'body': 'function($1) {\n  $2\n}'
+  'prototype function':
+    'prefix': '.pro'
+    'body': '.prototype.${1:f_name} = function($2) {\n  $3\n};'
 
 '.text.html.erb':
   'end for ruby block':
