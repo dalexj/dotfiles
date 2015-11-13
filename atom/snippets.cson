@@ -58,3 +58,6 @@
   'end for ruby block':
     'prefix': 'end'
     'body': '<% end %>'
+  'else for ruby block':
+    'prefix': '  else'
+    'body': '<% else %>'
