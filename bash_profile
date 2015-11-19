@@ -41,4 +41,5 @@ if [ -f ~/.git-completion.bash ]; then
   source ~/.git-completion.bash
   __git_complete gc _git_checkout
   __git_complete gb _git_branch
+  __git_complete gd _git_diff
 fi
