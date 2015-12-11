@@ -61,3 +61,17 @@
   'else for ruby block':
     'prefix': '  else'
     'body': '<% else %>'
+
+'.text.html.elixir':
+  'end':
+    'prefix': 'end'
+    'body': '<% end %>'
+  'else':
+    'prefix': '  else'
+    'body': '<% else %>'
+  'run code':
+    'prefix': '-'
+    'body': '<% $1 %>'
+  'print code':
+    'prefix': '='
+    'body': '<%= $1 %>'

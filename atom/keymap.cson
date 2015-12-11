@@ -38,3 +38,4 @@
   'alt-shift-L':'change-case:snake'
   'ctrl-h': 'tree-view:toggle-focus'
   'ctrl-l': 'tree-view:toggle-focus'
+  'ctrl-n': 'tree-view:add-file'
