@@ -36,6 +36,10 @@ settext 3
 # PROMPT_COMMAND='ruby_prompt'
 PROMPT_COMMAND='go_prompt'
 
+# my mix autocompelte script
+if [ -f ~/.mix-autocomplete.sh ]; then
+  source ~/.mix-autocomplete.sh
+fi
 # git autocompletion for branch names
 if [ -f ~/.git-completion.bash ]; then
   source ~/.git-completion.bash
