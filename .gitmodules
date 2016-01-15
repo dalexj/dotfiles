@@ -7,3 +7,6 @@
 [submodule "vim/bundle/vimgo"]
 	path = vim/bundle/vimgo
 	url = https://github.com/fatih/vim-go.git
+[submodule "mix_autocomplete"]
+	path = mix_autocomplete
+	url = git@github.com:dalexj/mix_autocomplete.git
