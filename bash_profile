@@ -2,6 +2,7 @@
 export PATH
 export PATH="$HOME/.bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 export GOPATH="$HOME/code/go"
 export PATH="$GOPATH/bin:$PATH"
