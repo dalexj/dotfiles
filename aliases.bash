@@ -12,6 +12,7 @@ alias aad="atom --dev ."
 alias :q="exit"
 alias path="echo $PATH | tr : '\n'"
 alias h="heroku"
+alias 2dotfiles="cd ~/dotfiles"
 function mkcd {
   mkdir $1
   cd $1
@@ -52,6 +53,8 @@ alias gb="git branch"
 alias ga="git add"
 alias gh="git log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short"
 alias gpu="git pull"
+alias gca="git commit --amend"
+alias gcan="git commit --amend --no-edit"
 alias gds="git diff --patience --staged"
 alias gcm="git commit -m"
 alias ghpages="git push origin master:gh-pages"
