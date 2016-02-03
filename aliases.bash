@@ -11,7 +11,7 @@ alias aa="atom ."
 alias aad="atom --dev ."
 alias :q="exit"
 alias path="echo $PATH | tr : '\n'"
-alias h="heroku"
+alias h="hk"
 alias 2dotfiles="cd ~/dotfiles"
 function mkcd {
   mkdir $1

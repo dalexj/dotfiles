@@ -1,21 +1,4 @@
-/*
- * Your Stylesheet
- *
- * This stylesheet is loaded when Atom starts up and is reloaded automatically
- * when it is changed and saved.
- *
- * Add your own CSS or Less to fully customize Atom.
- * If you are unfamiliar with Less, you can read more about it here:
- * http://lesscss.org
- */
 
-
-/*
- * Examples
- * (To see them, uncomment and save)
- */
-
-// style the background color of the tree view
 .tree-view {
   // background-color: whitesmoke;
 }
@@ -23,8 +6,9 @@
 // style the background and foreground colors on the atom-text-editor-element itself
 atom-text-editor {
   // color: white;
-  // background-color: hsl(180, 24%, 12%);
+  // background-color: #3a3a3a;
 }
+
 
 // To style other content in the text editor's shadow DOM, use the ::shadow expression
 atom-text-editor::shadow .cursor {
@@ -34,10 +18,13 @@ atom-text-editor::shadow .cursor {
 atom-text-editor,
 atom-text-editor::shadow {
   .trailing-whitespace {
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.3);
     border-radius: 2px;
   }
   .hard-tab {
     color: red;
+  }
+  .selection .region {
+    background-color: #666 !important;
   }
 }

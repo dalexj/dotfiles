@@ -41,6 +41,10 @@ PROMPT_COMMAND='go_prompt'
 if [ -f ~/.mix-autocomplete.sh ]; then
   source ~/.mix-autocomplete.sh
 fi
+# hk autocomplete
+if [ -f ~/.hk-bash-completion.sh ]; then
+  source ~/.hk-bash-completion.sh
+fi
 # git autocompletion for branch names
 if [ -f ~/.git-completion.bash ]; then
   source ~/.git-completion.bash
