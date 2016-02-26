@@ -66,6 +66,12 @@
   'pry':
     'prefix': 'pry'
     'body': 'require IEx; IEx.pry;'
+  'pipe operator':
+    'prefix': 'p'
+    'body': '|> '
+  'pipe operator with inspect':
+    'prefix': 'pii'
+    'body': '|> IO.inspect'
 
 '.text.html.elixir':
   'end':
@@ -80,3 +86,9 @@
   'print code':
     'prefix': '='
     'body': '<%= $1 %>'
+  'run code after tag':
+    'prefix': '>-'
+    'body': '><% $1 %>'
+  'print code after tag':
+    'prefix': '>='
+    'body': '><%= $1 %>'

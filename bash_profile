@@ -7,6 +7,9 @@ export PATH="/usr/local/bin:$PATH"
 export GOPATH="$HOME/code/go"
 export PATH="$GOPATH/bin:$PATH"
 
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 # rbenv
 which rbenv >/dev/null && eval "$(rbenv init -)"
 

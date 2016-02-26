@@ -12,8 +12,12 @@ func main() {
 	printSegment(currTime(), "7")
 	printSegment(currDir(), "7")
 	if isGitRepo() {
-		printSegment(gitBranch())
-		printSegment(cleanMsg())
+		if isGitRepoBeingInitialized() {
+			printSegment("initializing")
+		} else {
+			printSegment(gitBranch())
+			printSegment(cleanMsg())
+		}
 	}
 	fmt.Print("\n$ ")
 }
@@ -23,6 +27,11 @@ func currDir() string {
 }
 func currTime() string {
 	return "\\@"
+}
+
+func isGitRepoBeingInitialized() bool {
+	_, err := exec.Command("git", "rev-parse", "HEAD").Output()
+	return err != nil
 }
 
 func gitBranch() string {

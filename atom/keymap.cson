@@ -39,3 +39,5 @@
   'ctrl-h': 'tree-view:toggle-focus'
   'ctrl-l': 'tree-view:toggle-focus'
   'ctrl-n': 'tree-view:add-file'
+
+  'ctrl-=': 'editor:auto-indent'

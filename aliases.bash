@@ -11,7 +11,9 @@ alias aa="atom ."
 alias aad="atom --dev ."
 alias :q="exit"
 alias path="echo $PATH | tr : '\n'"
-alias h="hk"
+alias h="heroku"
+alias fetch="exercism fetch elixir"
+alias submit="exercism submit"
 alias 2dotfiles="cd ~/dotfiles"
 function mkcd {
   mkdir $1
@@ -97,3 +99,7 @@ alias dbset="bundle exec rake db:setup"
 alias be="bundle exec"
 alias rspe="bundle exec rspec"
 alias server="ruby -e 'require %q(sinatra); set :public_folder, %q(.)'"
+
+# Elixir/Mix/Phoenix aliases
+alias ms="mix phoenix.server"
+alias mc="iex -S mix"
