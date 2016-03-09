@@ -12,7 +12,7 @@ func main() {
 	printSegment(currTime(), "7")
 	virtualEnv := os.Getenv("VIRTUAL_ENV")
 	if strings.TrimSpace(virtualEnv) != "" {
-		printSegment("(" + virtualEnv + ")", "7")
+		printSegment("(" + basename(virtualEnv) + ")", "7")
 	}
 	printSegment(currDir(), "7")
 	if isGitRepo() {
@@ -85,4 +85,8 @@ func printSegment(text string, color ...string) {
 		textColor = color[0]
 	}
 	fmt.Print("\x1b[4" + bgColor + ";3" + textColor + "m " + text + " \x1b[00m ")
+}
+
+func basename(path string) string {
+	return system("basename", path)
 }
