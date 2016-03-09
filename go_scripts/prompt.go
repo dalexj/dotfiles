@@ -10,6 +10,10 @@ import (
 
 func main() {
 	printSegment(currTime(), "7")
+	virtualEnv := os.Getenv("VIRTUAL_ENV")
+	if strings.TrimSpace(virtualEnv) != "" {
+		printSegment("(" + virtualEnv + ")", "7")
+	}
 	printSegment(currDir(), "7")
 	if isGitRepo() {
 		if isGitRepoBeingInitialized() {

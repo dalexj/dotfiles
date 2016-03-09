@@ -98,7 +98,7 @@ alias dbmig="bundle exec rake db:migrate"
 alias dbset="bundle exec rake db:setup"
 alias be="bundle exec"
 alias rspe="bundle exec rspec"
-alias server="ruby -e 'require %q(sinatra); set :public_folder, %q(.)'"
+alias server="ruby -e 'require %q(sinatra); set :public_folder, %q(.); set :bind, %q(0.0.0.0)'"
 
 # Elixir/Mix/Phoenix aliases
 alias ms="mix phoenix.server"

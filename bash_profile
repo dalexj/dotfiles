@@ -7,6 +7,12 @@ export PATH="/usr/local/bin:$PATH"
 export GOPATH="$HOME/code/go"
 export PATH="$GOPATH/bin:$PATH"
 
+# python virtualenv
+export WORKON_HOME="~/python_environments"
+export VIRTUALENV_DISTRIBUTE=1
+export PYTHONDONTWRITEBYTECODE=1
+[[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source /usr/local/bin/virtualenvwrapper.sh
+
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 

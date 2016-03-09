@@ -92,3 +92,9 @@
   'print code after tag':
     'prefix': '>='
     'body': '><%= $1 %>'
+  'run code after tag with "':
+    'prefix': '">-'
+    'body': '"><% $1 %>'
+  'print code after tag with "':
+    'prefix': '">='
+    'body': '"><%= $1 %>'
