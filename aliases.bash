@@ -30,7 +30,7 @@ function swap {
   mv $TMPFILE "$2"
 }
 
-alias code="cd ~/code/ruby"
+alias code="cd ~/code"
 
 # fancy ls command
 # -l  long format
@@ -55,6 +55,7 @@ alias gb="git branch"
 alias ga="git add"
 alias gh="git log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short"
 alias gpu="git pull"
+alias gphm="git push heroku master"
 alias gca="git commit --amend"
 alias gcan="git commit --amend --no-edit"
 alias gds="git diff --patience --staged"
@@ -103,3 +104,6 @@ alias server="ruby -e 'require %q(sinatra); set :public_folder, %q(.); set :bind
 # Elixir/Mix/Phoenix aliases
 alias ms="mix phoenix.server"
 alias mc="iex -S mix"
+
+# npm
+alias fixnpm="rm -r node_modules && npm install"

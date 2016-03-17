@@ -73,6 +73,11 @@
     'prefix': 'pii'
     'body': '|> IO.inspect'
 
+'.source.python':
+  'debugger':
+    'prefix': 'pry'
+    'body': 'import ipdb; ipdb.set_trace()'
+
 '.text.html.elixir':
   'end':
     'prefix': 'end'
