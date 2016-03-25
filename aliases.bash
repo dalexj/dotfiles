@@ -107,3 +107,6 @@ alias mc="iex -S mix"
 
 # npm
 alias fixnpm="rm -r node_modules && npm install"
+
+# python
+alias djrs="python manage.py runserver"
