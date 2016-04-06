@@ -103,3 +103,11 @@
   'print code after tag with "':
     'prefix': '">='
     'body': '"><%= $1 %>'
+
+'.source.js.jsx':
+  'html div':
+    'prefix': 'div'
+    'body': '<div ${1:className="$2"}>\n  $3\n</div>'
+  'html span':
+    'prefix': 'span'
+    'body': '<span ${1:className="$2"}>$3</span>'
