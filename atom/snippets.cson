@@ -53,6 +53,12 @@
   'prototype function':
     'prefix': '.pro'
     'body': '.prototype.${1:f_name} = function($2) {\n  $3\n};'
+  'anonymous function with this':
+    'prefix': 'fthis'
+    'body': 'function($1) {\n  $2\n}.bind(this)'
+  'json stringify':
+    'prefix': 'json'
+    'body': 'JSON.stringify($1)'
 
 '.text.html.erb':
   'end for ruby block':

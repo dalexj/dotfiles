@@ -113,3 +113,4 @@ function ne { # bundle exec for node
 
 # python
 alias djrs="python manage.py runserver"
+alias dj="python manage.py"
