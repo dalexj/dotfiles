@@ -107,6 +107,10 @@ alias mc="iex -S mix"
 
 # npm
 alias fixnpm="rm -r node_modules && npm install"
+function ne { # bundle exec for node
+  ./node_modules/.bin/$1 "${@:2}"
+}
 
 # python
 alias djrs="python manage.py runserver"
+alias dj="python manage.py"
