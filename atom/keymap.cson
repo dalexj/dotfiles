@@ -41,3 +41,9 @@
   'ctrl-n': 'tree-view:add-file'
 
   'ctrl-=': 'editor:auto-indent'
+
+'body':
+  'ctrl-tab': 'pane:show-next-item'
+  'ctrl-tab ^ctrl': 'unset!'
+  'ctrl-shift-tab': 'pane:show-previous-item'
+  'ctrl-shift-tab ^ctrl': 'unset!'
