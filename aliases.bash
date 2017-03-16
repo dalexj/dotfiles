@@ -40,7 +40,8 @@ alias code="cd ~/code"
 # -o suppress group
 # -h humanize sizes
 # -q print nongraphic chars as question marks
-alias l="ls -lFGgohq"
+# alias l="ls -lFGgohq"
+alias l="exa -l"
 
 # Misspellings aliases
 alias cd..="cd .."
@@ -56,6 +57,7 @@ alias ga="git add"
 alias gcont="git rebase --continue"
 alias gh="git log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short"
 alias gpu="git pull"
+alias gpurb="git pull --rebase"
 alias gphm="git push heroku master"
 alias gca="git commit --amend"
 alias gcan="git commit --amend --no-edit"
@@ -65,7 +67,7 @@ alias ghpages="git push origin master:gh-pages"
 alias 2ghpages="open http://dalexj.github.io/$(basename $(pwd))"
 
 function ghub {
-  ruby ~/.ruby_scripts/ghub.rb
+  ruby ~/.ruby_scripts/ghub.rb $@
 }
 function gp {
   git push -u origin $(parse_git_branch)

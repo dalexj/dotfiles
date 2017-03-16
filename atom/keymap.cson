@@ -42,6 +42,11 @@
 
   'ctrl-=': 'editor:auto-indent'
 
+  'alt-up': 'editor:move-to-beginning-of-previous-paragraph'
+  'alt-down': 'editor:move-to-beginning-of-next-paragraph'
+  'shift-alt-up': 'editor:select-to-beginning-of-previous-paragraph'
+  'shift-alt-down': 'editor:select-to-beginning-of-next-paragraph'
+
 'body':
   'ctrl-tab': 'pane:show-next-item'
   'ctrl-tab ^ctrl': 'unset!'

@@ -45,6 +45,9 @@
   'active record test logger':
     'prefix': 'ar_logger'
     'body': 'ActiveRecord::Base.logger = Logger.new(STDOUT)'
+  'json parse':
+    'prefix': 'json'
+    'body': 'JSON.parse($1)'
 
 '.source.js':
   'linked state mixin':
@@ -116,7 +119,10 @@
 '.source.js.jsx':
   'html div':
     'prefix': 'div'
-    'body': '<div ${1:className="$2"}>\n  $3\n</div>'
+    'body': '<div${1: className="$2"}>\n  $3\n</div>'
   'html span':
     'prefix': 'span'
-    'body': '<span ${1:className="$2"}>$3</span>'
+    'body': '<span${1: className="$2"}>$3</span>'
+  'react createclass':
+    'prefix': 'react'
+    'body': 'var ${1:name} = React.createClass({\n  render() {\n    return (\n      $2\n    );\n  },\n});'

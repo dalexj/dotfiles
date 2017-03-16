@@ -14,7 +14,7 @@ export PYTHONDONTWRITEBYTECODE=1
 [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source /usr/local/bin/virtualenvwrapper.sh
 
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+[[ -s $(brew --prefix nvm)/nvm.sh ]] && source $(brew --prefix nvm)/nvm.sh
 
 # rbenv
 which rbenv >/dev/null && eval "$(rbenv init -)"
