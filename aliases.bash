@@ -40,8 +40,8 @@ alias code="cd ~/code"
 # -o suppress group
 # -h humanize sizes
 # -q print nongraphic chars as question marks
-# alias l="ls -lFGgohq"
-alias l="exa -l"
+alias l="ls -lFGgohq"
+# alias l="exa -l"
 
 # Misspellings aliases
 alias cd..="cd .."
