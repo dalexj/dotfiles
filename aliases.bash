@@ -30,8 +30,6 @@ function swap {
   mv $TMPFILE "$2"
 }
 
-alias code="cd ~/code"
-
 # fancy ls command
 # -l  long format
 # -F  / after dirs, * after exe, @ after symlink
@@ -63,6 +61,7 @@ alias gca="git commit --amend"
 alias gcan="git commit --amend --no-edit"
 alias gds="git diff --patience --staged"
 alias gcm="git commit -m"
+alias gcb="git checkout -b"
 alias ghpages="git push origin master:gh-pages"
 alias 2ghpages="open http://dalexj.github.io/$(basename $(pwd))"
 
