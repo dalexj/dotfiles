@@ -1,0 +1,94 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+alt+up",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+up",
+        "command": "-editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+down",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+down",
+        "command": "-editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+=",
+        "command": "editor.action.reindentselectedlines"
+    },
+    {
+        "key": "alt+cmd+b",
+        "command": "gitlens.toggleFileBlame",
+        "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /blameable/"
+    },
+    {
+        "key": "alt+cmd+g b",
+        "command": "-gitlens.toggleFileBlame",
+        "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /blameable/"
+    },
+    {
+        "key": "ctrl+cmd+n",
+        "command": "fileutils.newFileAtRoot"
+    },
+    {
+        "key": "alt+b",
+        "command": "-gitlens.toggleFileBlame",
+        "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /blameable/"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "-workbench.action.findInFiles"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "-workbench.view.search",
+        "when": "!searchViewletVisible"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "search.action.openNewEditor",
+        "when": "!inSearchEditor"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "search.action.focusQueryEditorWidget",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "cmd+o",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "cmd+w",
+        "command": "-workbench.action.closeWindow",
+        "when": "!editorIsOpen && !multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+shift+cmd+f",
+        "command": "-workbench.action.toggleZenMode"
+    },
+    {
+        "key": "ctrl+shift+cmd+f",
+        "command": "extension.runAll"
+    },
+    {
+        "key": "cmd+q",
+        "command": "-workbench.action.quit"
+    },
+    {
+        "key": "ctrl+shift+cmd+r",
+        "command": "rspec-quick-spec.createSpec"
+    },
+    {
+        "key": "ctrl+shift+cmd+v",
+        "command": "extension.runCurrent"
+    }
+]

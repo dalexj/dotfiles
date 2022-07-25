@@ -1,0 +1,86 @@
+{
+    "workbench.colorTheme": "Dark Low Contrast",
+    "files.trimTrailingWhitespace": true,
+    "files.autoSave": "onFocusChange",
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "workbench.editor.enablePreview": false,
+    "search.seedWithNearestWord": true,
+    "terminal.integrated.shell.osx": "/bin/bash",
+    "editor.gotoLocation.multipleDeclarations": "goto",
+    "editor.gotoLocation.multipleDefinitions": "goto",
+    "editor.gotoLocation.multipleImplementations": "goto",
+    "editor.gotoLocation.multipleReferences": "goto",
+    "editor.gotoLocation.multipleTypeDefinitions": "goto",
+    "search.showLineNumbers": true,
+    "search.smartCase": true,
+    "workbench.editor.closeOnFileDelete": true,
+    "editor.tabSize": 2,
+    "[javascript]": {
+        "editor.tabSize": 4,
+        "editor.detectIndentation": false
+    },
+    "[typescript]": {
+        "editor.tabSize": 4,
+        "editor.detectIndentation": false
+    },
+    "ruby.useLanguageServer": true,
+    "editor.scrollBeyondLastLine": false,
+    "editor.minimap.enabled": false,
+    "workbench.editor.showIcons": false,
+    "workbench.iconTheme": null,
+    "workbench.colorCustomizations": {
+        // Gutter indicators (left)
+        "editorGutter.modifiedBackground": "#c77a42",
+        "editorGutter.addedBackground": "#acc722",
+        "editorGutter.deletedBackground": "#c3272f",
+        // Scrollbar indicators (right)
+        "editorOverviewRuler.modifiedForeground": "#c77a42",
+        "editorOverviewRuler.addedForeground": "#acc722",
+        "editorOverviewRuler.deletedForeground": "#c3272f"
+        // "textMateRules": [
+        //     {
+        //         "scope": "punctuation.section.array.end.ruby.foreground",
+        //         "settings": {
+        //             "foreground": "#f8f8f8"
+        //         }
+        //     }
+        // ]
+    },
+    "scm.diffDecorationsGutterWidth": 5,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.enabled": false,
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.hovers.annotations.details": false,
+    "gitlens.menus": false,
+    "typescript.format.insertSpaceAfterCommaDelimiter": false,
+    "typescript.format.enable": false,
+    "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+    "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+    "typescript.format.insertSpaceAfterSemicolonInForStatements": false,
+    "typescript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
+    "openInGitHub.defaultBranch": "main",
+    "editor.rulers": [
+        120
+    ],
+    "rspec-iterm.runInForeground": true,
+    "ruby.intellisense": "rubyLocate",
+    "[ruby]": {
+        "editor.defaultFormatter": "rebornix.ruby"
+    },
+    "window.zoomLevel": 1,
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": true,
+        "markdown": false
+    },
+    "rspec-iterm.rspecCommand": "DISABLE_SIMPLECOV=true bundle exec rspec"
+}
