@@ -13,8 +13,8 @@ export VIRTUALENV_DISTRIBUTE=1
 export PYTHONDONTWRITEBYTECODE=1
 [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source /usr/local/bin/virtualenvwrapper.sh
 
-export NVM_DIR=~/.nvm
-[[ -s $(brew --prefix nvm)/nvm.sh ]] && source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # rbenv
 which rbenv >/dev/null && eval "$(rbenv init -)"
@@ -43,8 +43,8 @@ function settext {
 
 setbg 6
 settext 3
-# PROMPT_COMMAND='ruby_prompt'
-PROMPT_COMMAND='go_prompt'
+PROMPT_COMMAND='ruby_prompt'
+# PROMPT_COMMAND='go_prompt'
 
 # my mix autocompelte script
 if [ -f ~/.mix-autocomplete.sh ]; then
@@ -81,3 +81,9 @@ _complete_ssh_hosts ()
         return 0
 }
 complete -F _complete_ssh_hosts ssh
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# shut up about zsh
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+export PATH=$PATH:/usr/local/share/dotnet

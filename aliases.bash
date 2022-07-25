@@ -1,15 +1,13 @@
 # Bash aliases
 alias al="vim ~/.aliases.bash"
-alias aal="atom ~/.aliases.bash"
+alias cal="code ~/.aliases.bash"
 alias rbp="source ~/.bash_profile"
 alias ral="source ~/.aliases.bash"
 alias bp="vim ~/.bash_profile"
-alias abp="atom ~/.bash_profile"
+alias cbp="code ~/.bash_profile"
 alias ..="cd .."
 alias la="l -a"
 alias ll="l"
-alias aa="atom ."
-alias aad="atom --dev ."
 alias path="echo $PATH | tr : '\n'"
 alias h="heroku"
 alias fetch="exercism fetch elixir"
@@ -43,7 +41,6 @@ alias l="ls -lFGgohq"
 
 # Misspellings aliases
 alias cd..="cd .."
-alias aotm="atom"
 # Git aliases
 alias gs="git status && echo -e '\033[32mHave you run your tests?'"
 alias gd="git diff --patience"
@@ -52,8 +49,9 @@ alias gst="git stash"
 alias gr="git reset"
 alias gb="git branch"
 alias ga="git add"
+alias gcp="git cherry-pick"
 alias gcont="git rebase --continue"
-alias gh="git log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short"
+alias ghist="git log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short"
 alias gpu="git pull"
 alias gpurb="git pull --rebase"
 alias gphm="git push heroku master"
@@ -62,9 +60,17 @@ alias gcan="git commit --amend --no-edit"
 alias gds="git diff --patience --staged"
 alias gcm="git commit -m"
 alias gcb="git checkout -b"
+alias master="git checkout master && git pull && bundle install && bundle exec rails db:migrate && bundle exec rails db:migrate RAILS_ENV=test && bundle exec rails db:migrate:with_data"
+alias main="git checkout main && git pull && bundle install && bundle exec rails db:migrate && bundle exec rails db:migrate RAILS_ENV=test && bundle exec rails db:migrate:with_data && bundle clean --force"
 alias ghpages="git push origin master:gh-pages"
 alias 2ghpages="open http://dalexj.github.io/$(basename $(pwd))"
 
+function gdo {
+  git diff --patience $(git rev-parse --abbrev-ref --symbolic-full-name @{u})
+}
+function gri {
+  git rebase -i HEAD~$1
+}
 function ghub {
   ruby ~/.ruby_scripts/ghub.rb $@
 }
@@ -90,14 +96,32 @@ function devlog {
   tail -$1 log/development.log
 }
 
+# rollback a version
+function dbdown {
+  if [ "$#" -ne 1 ]; then
+      echo "Arguments error: Give the migration number you want to roll back"
+      return 0
+  fi
+  bundle exec rails db:migrate:down VERSION=$1 && bundle exec rails db:migrate:down VERSION=$1 RAILS_ENV=test
+}
+function dbdowndev {
+  if [ "$#" -ne 1 ]; then
+      echo "Arguments error: Give the migration number you want to roll back"
+      return 0
+  fi
+  bundle exec rails db:migrate:down VERSION=$1
+}
+
 alias whocares="bundle exec rake db:test:prepare"
-alias routes="bundle exec rake routes"
+alias routes="bundle exec rails routes"
 alias uni="open http://localhost:8080/; unicorn"
 alias rak="bundle exec rake"
 alias rc="rails c"
+alias cop="bundle exec rubocop"
 alias pr="pry"
 alias rs="(sleep 4 && open http://localhost:3000/ &); rails s"
-alias dbmig="bundle exec rake db:migrate"
+alias dbmig="bundle exec rails db:migrate && bundle exec rails db:migrate RAILS_ENV=test"
+alias dbrollback="bundle exec rails db:rollback && bundle exec rails db:rollback RAILS_ENV=test"
 alias dbset="bundle exec rake db:setup"
 alias be="bundle exec"
 alias rspe="bundle exec rspec"
