@@ -7,7 +7,6 @@
     "editor.formatOnPaste": true,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "workbench.editor.enablePreview": false,
     "search.seedWithNearestWord": true,
     "terminal.integrated.shell.osx": "/bin/bash",
     "editor.gotoLocation.multipleDeclarations": "goto",
@@ -20,15 +19,13 @@
     "workbench.editor.closeOnFileDelete": true,
     "editor.tabSize": 2,
     "[javascript]": {
-        "editor.tabSize": 4,
+        "editor.tabSize": 2,
         "editor.detectIndentation": false
     },
     "[typescript]": {
-        "editor.tabSize": 4,
+        "editor.tabSize": 2,
         "editor.detectIndentation": false
     },
-    "ruby.useLanguageServer": true,
-    "editor.scrollBeyondLastLine": false,
     "editor.minimap.enabled": false,
     "workbench.editor.showIcons": false,
     "workbench.iconTheme": null,
@@ -67,20 +64,37 @@
     "typescript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
     "openInGitHub.defaultBranch": "main",
     "editor.rulers": [
-        120
+        150
     ],
     "rspec-iterm.runInForeground": true,
     "ruby.intellisense": "rubyLocate",
     "[ruby]": {
         "editor.defaultFormatter": "rebornix.ruby"
     },
-    "window.zoomLevel": 1,
     "editor.inlineSuggest.enabled": true,
     "github.copilot.enable": {
         "*": true,
-        "yaml": false,
+        "yaml": true,
         "plaintext": true,
-        "markdown": false
+        "markdown": true
     },
-    "rspec-iterm.rspecCommand": "DISABLE_SIMPLECOV=true bundle exec rspec"
+    "rspec-iterm.rspecCommand": "DISABLE_SIMPLECOV=true bundle exec rspec",
+    "ruby.useLanguageServer": true,
+    "workbench.editor.enablePreview": false,
+    "emmet.includeLanguages": {
+        "erb": "html"
+    },
+    "window.zoomLevel": 1,
+    "editor.indentSize": "tabSize",
+    "ActiveFileInStatusBar.fullpath": false,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.rename.enablePreview": false,
+    "files.associations": {
+        "CODEOWNERS": "bat"
+    },
+    "editor.scrollBeyondLastLine": false,
+    "editor.padding.bottom": 200,
+    "github.copilot.editor.enableAutoCompletions": true
 }

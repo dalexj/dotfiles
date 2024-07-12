@@ -42,8 +42,10 @@ alias l="ls -lFGgohq"
 # Misspellings aliases
 alias cd..="cd .."
 # Git aliases
+# run this to not show a/file b/file:
+#   git config --global diff.noprefix true
 alias gs="git status && echo -e '\033[32mHave you run your tests?'"
-alias gd="git diff --patience"
+alias gd="git diff --patience --no-prefix"
 alias gc="git checkout"
 alias gst="git stash"
 alias gr="git reset"
@@ -57,7 +59,7 @@ alias gpurb="git pull --rebase"
 alias gphm="git push heroku master"
 alias gca="git commit --amend"
 alias gcan="git commit --amend --no-edit"
-alias gds="git diff --patience --staged"
+alias gds="git diff --patience --staged --no-prefix"
 alias gcm="git commit -m"
 alias gcb="git checkout -b"
 alias master="git checkout master && git pull && bundle install && bundle exec rails db:migrate && bundle exec rails db:migrate RAILS_ENV=test && bundle exec rails db:migrate:with_data"
@@ -66,16 +68,16 @@ alias ghpages="git push origin master:gh-pages"
 alias 2ghpages="open http://dalexj.github.io/$(basename $(pwd))"
 
 function gdo {
-  git diff --patience $(git rev-parse --abbrev-ref --symbolic-full-name @{u})
+  git diff --patience --no-prefix $(git rev-parse --abbrev-ref --symbolic-full-name @{u})
 }
 function gri {
   git rebase -i HEAD~$1
 }
 function ghub {
-  ruby ~/.ruby_scripts/ghub.rb $@
+  gh browse
 }
 function gp {
-  git push -u origin $(parse_git_branch)
+  git push -u origin $(parse_git_branch) $@
 }
 function parse_git_branch {
   ruby ~/.ruby_scripts/parse_git_branch.rb
@@ -102,14 +104,14 @@ function dbdown {
       echo "Arguments error: Give the migration number you want to roll back"
       return 0
   fi
-  bundle exec rails db:migrate:down VERSION=$1 && bundle exec rails db:migrate:down VERSION=$1 RAILS_ENV=test
+  bundle exec rails db:migrate:down:primary VERSION=$1 && bundle exec rails db:migrate:down:primary VERSION=$1 RAILS_ENV=test
 }
 function dbdowndev {
   if [ "$#" -ne 1 ]; then
       echo "Arguments error: Give the migration number you want to roll back"
       return 0
   fi
-  bundle exec rails db:migrate:down VERSION=$1
+  bundle exec rails db:migrate:down:primary VERSION=$1
 }
 
 alias whocares="bundle exec rake db:test:prepare"
@@ -141,3 +143,7 @@ alias bw="./node_modules/.bin/brunch watch"
 # python
 alias djrs="python manage.py runserver"
 alias dj="python manage.py"
+
+function notes {
+  code ~/notes/$(date '+%Y_%m_%d')_notes.txt
+}

@@ -6,6 +6,7 @@ export PATH="/usr/local/bin:$PATH"
 
 export GOPATH="$HOME/code/go"
 export PATH="$GOPATH/bin:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # python virtualenv
 export WORKON_HOME="~/python_environments"
@@ -87,3 +88,5 @@ complete -F _complete_ssh_hosts ssh
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 export PATH=$PATH:/usr/local/share/dotnet
+
+alias assume=". assume"
